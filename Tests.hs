@@ -15,6 +15,6 @@ tests=[
 	)
 	]
 	
-test (name,input,result) = name ++ (if f 0 [] [] input == result then " OK" else " FAIL")
+test (name,input,result) = name ++ (if challenge input == result then " OK" else " FAIL")
 
 main=putStr $ unlines $ map test tests
